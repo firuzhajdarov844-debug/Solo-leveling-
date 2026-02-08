@@ -19,3 +19,7 @@ function initSystem(){
   SYSTEM.difficulty = localStorage.getItem("V4_DIFFICULTY");
   SYSTEM.class = localStorage.getItem("V4_CLASS");
 }
+setInterval(()=>{
+  regenEnergy();
+  savePlayer();
+}, 1000);
