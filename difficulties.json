@@ -1,0 +1,30 @@
+{
+  "easy": {
+    "xp": 2,
+    "fatigue": 0.5,
+    "death": false,
+    "loot": 2,
+    "ai": "helper"
+  },
+  "normal": {
+    "xp": 1,
+    "fatigue": 1,
+    "death": true,
+    "loot": 1,
+    "ai": "neutral"
+  },
+  "hard": {
+    "xp": 0.6,
+    "fatigue": 1.5,
+    "death": true,
+    "loot": 0.7,
+    "ai": "strict"
+  },
+  "hell": {
+    "xp": 0.3,
+    "fatigue": 2,
+    "death": "permanent",
+    "loot": 0.3,
+    "ai": "aggressive"
+  }
+}
