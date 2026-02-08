@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>V4 PRO — AI CORE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="screen">
+  <h1>AI CORE</h1>
+  <div id="aiBox"></div>
+
+  <input id="aiInput" placeholder="Вопрос системе...">
+  <button onclick="askAI()">ОТПРАВИТЬ</button>
+
+  <button onclick="location.href='system.html'">НАЗАД</button>
+</div>
+
+<script src="core/player.js"></script>
+<script src="core/ranks.js"></script>
+<script src="core/ai.js"></script>
+
+<script>
+loadRanks().then(()=>{
+  checkRank();
+  showAI();
+});
+
+function showAI(){
+  const box = document.getElementById("aiBox");
+  const msg = aiThink();
+  box.innerHTML = `<p>${msg}</p>`;
+}
+
+function askAI(){
+  const input = document.getElementById("aiInput").value.toLowerCase();
+  let response = "Система не распознала запрос.";
+
+  if(input.includes("что делать")){
+    response = "Рекомендация: тренировка и развитие ядра.";
+  }
+  if(input.includes("как прокачаться")){
+    response = "Путь развития: навыки → ранг → эволюция.";
+  }
+  if(input.includes("кто я")){
+    response = "Ты — сущность системы V4 PRO.";
+  }
+  if(input.includes("ранг")){
+    response = "Текущий ранг: " + PLAYER.rank;
+  }
+  if(input.includes("класс")){
+    response = "Класс сущности: " + PLAYER.class;
+  }
+
+  document.getElementById("aiBox").innerHTML += `<p><b>AI:</b> ${response}</p>`;
+}
+</script>
+</body>
+</html>
