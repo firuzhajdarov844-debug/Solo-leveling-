@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>V4 PRO — Навыки</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="screen">
+  <h1>SKILL CORE</h1>
+  <div id="skillBox"></div>
+  <button onclick="location.href='system.html'">НАЗАД</button>
+</div>
+
+<script src="core/player.js"></script>
+<script src="core/ranks.js"></script>
+<script src="core/skills.js"></script>
+
+<script>
+loadPlayer();
+loadRanks().then(()=>{
+  loadSkills().then(()=>{
+    renderSkills();
+  });
+});
+
+function renderSkills(){
+  const box = document.getElementById("skillBox");
+  box.innerHTML = "";
+
+  Object.keys(SKILLS).forEach(id=>{
+    const s = SKILLS[id];
+    const learned = PLAYER_SKILLS.includes(id);
+    const can = canLearnSkill(s);
+
+    const div = document.createElement("div");
+    div.className = "mode-card";
+    div.innerHTML = `
+      <h3>${s.name}</h3>
+      <p>${s.desc}</p>
+      <p>Тип: ${s.type}</p>
+      <p>Требования: lvl ${s.req.level}, ранг ${s.req.rank}</p>
+      <button ${(!can || learned)?"disabled":""}
+        onclick="learn('${id}')">
+        ${learned ? "ИЗУЧЕНО" : "ИЗУЧИТЬ"}
+      </button>
+    `;
+    box.appendChild(div);
+  });
+}
+
+function learn(id){
+  if(learnSkill(id)){
+    renderSkills();
+  }else{
+    alert("Требования не выполнены");
+  }
+}
+</script>
+</body>
+</html>
