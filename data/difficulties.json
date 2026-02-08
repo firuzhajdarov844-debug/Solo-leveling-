@@ -1,0 +1,38 @@
+{
+  "easy": {
+    "name": "ЛЁГКИЙ",
+    "xp": 2,
+    "fatigue": 0.5,
+    "death": false,
+    "loot": 2,
+    "ai": "helper",
+    "desc": "Система помогает. Быстрый рост. Минимальный риск."
+  },
+  "normal": {
+    "name": "НОРМАЛЬНЫЙ",
+    "xp": 1,
+    "fatigue": 1,
+    "death": true,
+    "loot": 1,
+    "ai": "neutral",
+    "desc": "Баланс. Реальный риск. Настоящая прокачка."
+  },
+  "hard": {
+    "name": "ХАРДКОР",
+    "xp": 0.6,
+    "fatigue": 1.5,
+    "death": true,
+    "loot": 0.7,
+    "ai": "strict",
+    "desc": "Мир враждебен. Ошибки наказываются."
+  },
+  "hell": {
+    "name": "АД",
+    "xp": 0.3,
+    "fatigue": 2,
+    "death": "permanent",
+    "loot": 0.3,
+    "ai": "aggressive",
+    "desc": "Выживают не игроки. Выживают сущности."
+  }
+}
