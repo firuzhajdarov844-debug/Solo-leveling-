@@ -15,6 +15,7 @@
 
   <button onclick="gainXP()">Тренировка</button>
 </div>
+  <div id="rankBox"></div>
 
 <script src="core/engine.js"></script>
 <script src="core/player.js"></script>
@@ -62,5 +63,24 @@ function update(){
   checkRank();
   update();
 });
+  const rankBox = document.getElementById("rankBox");
+
+function update(){
+  rankBox.innerHTML = `
+    <h2 style="color:${RANKS[PLAYER.rank]?.color}">
+      ${PLAYER.rank} — ${RANKS[PLAYER.rank]?.title}
+    </h2>
+  `;
+
+  info.innerHTML = `
+    <p>Класс: ${cls}</p>
+    <p>Сложность: ${diff}</p>
+    <p>Ранг: ${PLAYER.rank}</p>
+    <p>Уровень: ${PLAYER.level}</p>
+    <p>STR: ${PLAYER.stats.str}</p>
+    <p>END: ${PLAYER.stats.end}</p>
+    <p>INT: ${PLAYER.stats.int}</p>
+  `;
+}
 </body>
 </html>
