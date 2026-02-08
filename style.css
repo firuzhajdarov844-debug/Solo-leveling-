@@ -37,3 +37,14 @@ body{
   cursor:pointer;
   font-weight:bold;
 }
+.aura-E { box-shadow: 0 0 30px #00e5ff inset; }
+.aura-D { box-shadow: 0 0 30px #00ff88 inset; }
+.aura-C { box-shadow: 0 0 30px #ffee00 inset; }
+.aura-B { box-shadow: 0 0 30px #ff9900 inset; }
+.aura-A { box-shadow: 0 0 30px #ff0033 inset; }
+.aura-S { box-shadow: 0 0 40px #a855f7 inset; }
+.aura-SS { box-shadow: 0 0 50px #ffffff inset; }
+.aura-SSS { box-shadow: 0 0 60px #ffd700 inset; }
+.aura-Ω { box-shadow: 0 0 70px #7f00ff inset; }
+.aura-VOID { box-shadow: 0 0 80px #000 inset; }
+.aura-GOD { box-shadow: 0 0 100px #00ffff inset; }
