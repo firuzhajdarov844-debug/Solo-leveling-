@@ -1,0 +1,45 @@
+{
+  "power_strike": {
+    "name": "СИЛОВОЙ УДАР",
+    "desc": "Увеличивает урон на 20%",
+    "type": "active",
+    "req": { "level": 3, "rank": "F" },
+    "cost": { "stamina": 5 },
+    "stats": { "str": 2 },
+    "class": ["warrior", "swordsman"],
+    "tree": "combat"
+  },
+
+  "mana_control": {
+    "name": "КОНТРОЛЬ МАНЫ",
+    "desc": "Регенерация маны +30%",
+    "type": "passive",
+    "req": { "level": 5, "rank": "E" },
+    "cost": { "mana": 0 },
+    "stats": { "int": 3 },
+    "class": ["mage", "necromancer"],
+    "tree": "magic"
+  },
+
+  "shadow_step": {
+    "name": "ШАГ ТЕНИ",
+    "desc": "Телепортация на короткую дистанцию",
+    "type": "active",
+    "req": { "level": 10, "rank": "D" },
+    "cost": { "mana": 10 },
+    "stats": { "agi": 2 },
+    "class": ["assassin", "swordsman"],
+    "tree": "shadow"
+  },
+
+  "soul_link": {
+    "name": "СВЯЗЬ ДУШ",
+    "desc": "Контроль призванных сущностей",
+    "type": "hidden",
+    "req": { "level": 30, "rank": "B" },
+    "cost": { "mana": 30 },
+    "stats": { "int": 5 },
+    "class": ["necromancer"],
+    "tree": "void"
+  }
+}
