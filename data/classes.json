@@ -1,0 +1,37 @@
+{
+  "warrior": {
+    "name": "ВОИН",
+    "desc": "Сила. Защита. Фронт боя.",
+    "stats": { "str": 3, "end": 2, "int": 0 },
+    "aura": "red",
+    "path": ["paladin", "berserk"]
+  },
+  "mage": {
+    "name": "МАГ",
+    "desc": "Мана. Контроль. Стихии.",
+    "stats": { "str": 0, "end": 1, "int": 4 },
+    "aura": "blue",
+    "path": ["archmage", "necromancer"]
+  },
+  "healer": {
+    "name": "ЦЕЛИТЕЛЬ",
+    "desc": "Жизнь. Поддержка. Свет.",
+    "stats": { "str": 0, "end": 2, "int": 3 },
+    "aura": "green",
+    "path": ["paladin", "guardian"]
+  },
+  "necromancer": {
+    "name": "НЕКРОМАНТ",
+    "desc": "Смерть. Тьма. Контроль душ.",
+    "stats": { "str": 0, "end": 1, "int": 5 },
+    "aura": "purple",
+    "path": ["void_lord", "lich"]
+  },
+  "swordsman": {
+    "name": "МЕЧНИК",
+    "desc": "Техника. Скорость. Искусство клинка.",
+    "stats": { "str": 2, "end": 2, "int": 1 },
+    "aura": "white",
+    "path": ["blade_master", "assassin"]
+  }
+}
