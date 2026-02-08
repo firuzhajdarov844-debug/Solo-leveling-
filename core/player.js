@@ -23,3 +23,12 @@ function applyClassStats(data){
   PLAYER.stats.end += data.stats.end;
   PLAYER.stats.int += data.stats.int;
 }
+function gainXP(amount = 10){
+  PLAYER.xp += amount;
+
+  if(PLAYER.xp >= 100){
+    PLAYER.xp = 0;
+    PLAYER.level++;
+    checkRank(); // ← ВАЖНО
+  }
+}
