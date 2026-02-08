@@ -96,6 +96,13 @@ function update(){
     <p>INT: ${PLAYER.stats.int}</p>
   `;
 }
-  <button onclick="location.href='ai.html'">AI CORE</button>
+  <button onclick="location.href='ai.html'">AI CORE</document.getElementById("manaBar").style.width =
+  (PLAYER.mana / PLAYER.manaMax * 100) + "%";
+
+document.getElementById("staminaBar").style.width =
+  (PLAYER.stamina / PLAYER.staminaMax * 100) + "%";
+
+document.getElementById("fatigueBar").style.width =
+  (PLAYER.fatigue / PLAYER.fatigueMax * 100) + "%";
 </body>
 </html>
