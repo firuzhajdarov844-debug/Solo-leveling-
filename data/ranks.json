@@ -1,0 +1,14 @@
+{
+  "F":  { "minLevel": 1,   "aura": "none",   "color": "#555",    "title": "Сущность" },
+  "E":  { "minLevel": 5,   "aura": "blue",   "color": "#00e5ff", "title": "Пробуждённый" },
+  "D":  { "minLevel": 10,  "aura": "green",  "color": "#00ff88", "title": "Ученик" },
+  "C":  { "minLevel": 20,  "aura": "yellow", "color": "#ffee00", "title": "Воин" },
+  "B":  { "minLevel": 30,  "aura": "orange", "color": "#ff9900", "title": "Элитный" },
+  "A":  { "minLevel": 40,  "aura": "red",    "color": "#ff0033", "title": "Чемпион" },
+  "S":  { "minLevel": 50,  "aura": "violet", "color": "#a855f7", "title": "Легенда" },
+  "SS": { "minLevel": 70,  "aura": "white",  "color": "#ffffff", "title": "Миф" },
+  "SSS":{"minLevel": 100, "aura": "gold",   "color": "#ffd700", "title": "Абсолют" },
+  "Ω":  { "minLevel": 150, "aura": "void",   "color": "#7f00ff", "title": "Омега" },
+  "VOID":{"minLevel": 200,"aura": "dark",   "color": "#000000", "title": "Пустота" },
+  "GOD":{"minLevel": 300, "aura": "divine",  "color": "#00ffff", "title": "Божество" }
+}
