@@ -1,0 +1,39 @@
+body{
+  margin:0;
+  background:black;
+  color:#00e5ff;
+  font-family: monospace;
+}
+
+.screen{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:20px;
+  text-align:center;
+}
+
+.mode-card{
+  border:1px solid #00e5ff;
+  box-shadow:0 0 15px #00e5ff33;
+  padding:20px;
+  margin:15px;
+  width:90%;
+  max-width:400px;
+}
+
+.mode-card h2{
+  color:#00e5ff;
+  text-shadow:0 0 10px #00e5ff;
+}
+
+.mode-card button{
+  margin-top:10px;
+  padding:10px 20px;
+  background:#00e5ff;
+  color:black;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
