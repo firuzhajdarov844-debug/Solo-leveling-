@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>V4 PRO — SYSTEM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="screen">
+  <h1>SYSTEM CORE</h1>
+
+  <div id="info"></div>
+
+  <button onclick="gainXP()">Тренировка</button>
+</div>
+
+<script src="core/engine.js"></script>
+<script src="core/player.js"></script>
+<script>
+initSystem();
+
+const info = document.getElementById("info");
+
+let cls = localStorage.getItem("V4_CLASS");
+let diff = localStorage.getItem("V4_DIFFICULTY");
+
+info.innerHTML = `
+  <p>Класс: ${cls}</p>
+  <p>Сложность: ${diff}</p>
+  <p>Ранг: ${PLAYER.rank}</p>
+  <p>Уровень: ${PLAYER.level}</p>
+  <p>STR: ${PLAYER.stats.str}</p>
+  <p>END: ${PLAYER.stats.end}</p>
+  <p>INT: ${PLAYER.stats.int}</p>
+`;
+
+function gainXP(){
+  PLAYER.xp += 10;
+  if(PLAYER.xp >= 100){
+    PLAYER.xp = 0;
+    PLAYER.level++;
+  }
+  update();
+}
+
+function update(){
+  info.innerHTML = `
+    <p>Класс: ${cls}</p>
+    <p>Сложность: ${diff}</p>
+    <p>Ранг: ${PLAYER.rank}</p>
+    <p>Уровень: ${PLAYER.level}</p>
+    <p>STR: ${PLAYER.stats.str}</p>
+    <p>END: ${PLAYER.stats.end}</p>
+    <p>INT: ${PLAYER.stats.int}</p>
+  `;
+}
+</script>
+</body>
+</html>
