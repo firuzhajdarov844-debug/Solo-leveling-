@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>V4 PRO — Выбор пути</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="screen">
+  <h1>ВЫБОР ПУТИ</h1>
+  <p>Профессия определит твою судьбу</p>
+
+  <div id="classes"></div>
+</div>
+
+<script src="core/player.js"></script>
+<script>
+fetch("data/classes.json")
+.then(r=>r.json())
+.then(data=>{
+  const box = document.getElementById("classes");
+
+  Object.keys(data).forEach(key=>{
+    const c = data[key];
+
+    const div = document.createElement("div");
+    div.className = "mode-card";
+    div.innerHTML = `
+      <h2>${c.name}</h2>
+      <p>${c.desc}</p>
+      <p>Аура: ${c.aura}</p>
+      <button onclick="selectClass('${key}')">ВЫБРАТЬ ПУТЬ</button>
+    `;
+    box.appendChild(div);
+  });
+
+  window.selectClass = function(key){
+    fetch("data/classes.json")
+    .then(r=>r.json())
+    .then(classes=>{
+      applyClassStats(classes[key]);
+      setClass(key);
+    });
+  }
+});
+</script>
+</body>
+</html>
