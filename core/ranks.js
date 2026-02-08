@@ -26,3 +26,14 @@ function onRankUp(rank){
   console.log("RANK UP:", rank);
   // здесь позже: аура, эффекты, AI реакции, новые зоны, навыки
 }
+function onRankUp(rank){
+  console.log("RANK UP:", rank);
+
+  if(rank === "S"){
+    alert("SYSTEM AI: Легендарная форма обнаружена.");
+  }
+
+  if(rank === "SSS"){
+    alert("SYSTEM AI: Абсолютная сущность подтверждена.");
+  }
+}
