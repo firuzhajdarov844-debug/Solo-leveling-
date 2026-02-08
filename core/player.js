@@ -32,3 +32,24 @@ function gainXP(amount = 10){
     checkRank(); // ← ВАЖНО
   }
 }
+let PLAYER = {
+  class: null,
+  stats: {
+    str: 1,
+    end: 1,
+    int: 1,
+    agi: 1
+  },
+  rank: "F",
+  level: 1,
+  xp: 0,
+
+  mana: 50,
+  manaMax: 50,
+
+  stamina: 50,
+  staminaMax: 50,
+
+  fatigue: 0,
+  fatigueMax: 100
+};
